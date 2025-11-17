@@ -54,6 +54,113 @@
       font-size: 26px;
     }
 
+.about {
+  width: 92%;
+  max-width: 1000px;
+  margin: 16px auto 28px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  animation: aboutFade 0.6s ease both;
+}
+
+.about-inner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: row-reverse; 
+}
+
+.about-img img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.12);
+  display: block;
+}
+
+.about-text h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #2f2f2f;
+}
+
+.about-text p {
+  margin: 0 0 12px;
+  color: #514c48;
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: left; 
+}
+
+.about .whatsapp-button {
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 600px) {
+  .about-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-img img {
+    width: 95px;
+    height: 95px;
+  }
+  .about-text p {
+    text-align: center;
+  }
+}
+
+@keyframes aboutFade {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#about {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    line-height: 1.9;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    font-size: 17px;
+}
+
+/* عنوان من أنا */
+#about h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+
+#about {
+    text-align: center;
+    line-height: 1.9;
+    font-size: 18px;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.6);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.about-container {
+    background: #ffffffeb;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
     .services {
       display: flex;
       flex-direction: column;
@@ -89,6 +196,46 @@
       margin: 0;
       font-size: 16px;
     }
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.service {
+    background: #ffffffd2;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.service h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #3a2f2f;
+    font-weight: bold;
+}
+
+/* السعر */
+.service p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #5f5050;
+}
+
+
 
     .popup {
       display: none;
@@ -177,33 +324,99 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.portfolio-link {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 12px;
+    background: #d8d3c4; 
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.portfolio-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+#footer {
+    background-color: #d9d2c7;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#footer p {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+.portfolio-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: transparent !important; 
+}
+
+.portfolio-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #2f2f2f; 
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <img src="lamsat.jpg" alt="شعار لمسة ليث">
+  <header class="fade-in">
+    <img src="images/lamsat.jpg" alt="شعار لمسة ليث">
     <h1>لمسة ليث | خدمات التصميم</h1>
   </header>
+  
+<section id="about" class="fade-in">
+    <div class="about-text">
+      <h2>من أنا؟</h2>
+      <p>
+        أنا ليث، شاب عمره 17 سنة اكتشف شغفه في التصميم بدري، وقرر يبني منه شي يفتخر فيه يومًا ما.
+        التصميم بالنسبة لي مو مجرد هواية، هو لغة أقدر أعبّر فيها عن أفكاري، وأحط فيها لمستي الخاصة… اللمسة اللي سميت فيها هذا المكان.
+        أنا ما أدّعي الكمال، لكني أتعلم كل يوم وأطوّر نفسي خطوة بخطوة. وطريق النجاح يصير أسهل وأجمل بدعمكم…
+        فلا تبخلون على ولدكم بكلمة، بنصيحة، أو بـ دفة بسيطة تخلّيه يكمل الطريق بثقة. 
+      </p>
+    </div>
+  </div>
+</section>
 
   <section class="services">
     <div class="service" onclick="openPopup('logo')">
-      <h2>🎨 تصميم لوقو</h2>
-      <p></p>
+      <h2 class="fade-in">🎨 تصميم لوقو</h2>
+      <p>السعر: 6 ريال</p>
     </div>
 
     <div class="service" onclick="openPopup('presentation')">
-      <h2>💻 عرض تقديمي</h2>
-      <p></p>
+      <h2 class="fade-in">💻 عرض تقديمي</h2>
+      <p>السعر: 20 ريال (أو 3 ريال لكل شريحة)</p>
     </div>
 
     <div class="service" onclick="openPopup('video')">
-      <h2>🎬 مونتاج فيديو قصير</h2>
-      <p></p>
+      <h2 class="fade-in">🎬 مونتاج فيديو قصير</h2>
+      <p>السعر: 25 ريال</p>
     </div>
 
     <div class="service" onclick="openPopup('research')">
-      <h2>📚 بحوث ومشاريع</h2>
-      <p></p>
+      <h2 class="fade-in">📚 بحوث ومشاريع</h2>
+      <p>السعر: 4 ريال لكل صفحة</p>
     </div>
   </section>
 
@@ -242,6 +455,13 @@
       <button class="close-btn" onclick="closePopup('research')">إغلاق</button>
     </div>
   </div>
+  <section class="portfolio-section">
+    <h2>معرض الأعمال :</h2>
+
+    <a href="portfolio.html" class="portfolio-link">
+        عرض الأعمال
+    </a>
+</section>
 
   <script>
     function openPopup(service) {
@@ -254,8 +474,30 @@
   <a href="https://wa.me/966537439959" target="_blank" class="whatsapp-fixed">
    تواصل عبر واتساب
 </a>
+<script>
+    const elements = document.querySelectorAll('.fade-in');
+
+    function showElements() {
+        elements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                el.classList.add('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', showElements);
+    window.addEventListener('load', showElements);
+</script>
+
+<footer id="footer">
+    <p>© 2025 لمسة ليث – جميع الحقوق محفوظة</p>
+</footer>
+
 </body>
 </html>
+
+
 
 
 
