@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال – لمسة ليث</title>
+    <link rel="stylesheet" href="index.html">
+    <style>
+        body {
+    font-family: "Cairo", sans-serif;
+    background-color: #c8bcb8;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.portfolio-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #444;
+    font-size: 15px;
+}
+    </style>
+</head>
+<body>
+
+<section style="padding:60px 0; text-align:center;">
+    <h2>معرض الأعمال</h2>
+    <p style="margin-bottom:30px; color:#555;">هنا تشوف بعض من شغلي في اللوقوهات والتصاميم والعروض.</p>
+
+    <div class="portfolio-container">
+
+        <div class="portfolio-item">
+            <img src="images/work1.jpg" alt="عمل 1">
+            <p>تصميم لوقو – ستايل بسيط وراقي</p>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="images/work2.jpg" alt="عمل 2">
+            <p>عرض تقديمي – أنيق ومناسب للمهام</p>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="images/work3.jpg" alt="عمل 3">
+            <p>مونتاج فيديو قصير – حركة ناعمة وإخراج جميل</p>
+        </div>
+
+    </div>
+
+    <a href="index.html" style="display:block;margin-top:40px;text-decoration:none;color:#333;">
+        ← الرجوع للصفحة الرئيسية
+    </a>
+
+</section>
+
+</body>
+</html>
